@@ -43,6 +43,17 @@ function Page() {
             >
               CV
             </Link>
+
+            <Link
+              href="/SpeechToText"
+              className={`${
+                pageName === "/SpeechToText"
+                  ? "bg-green-900 rounded-md px-4 py-2 text-sm font-medium text-white"
+                  : "rounded-md px-4 py-2 text-sm font-medium text-blue"
+              }`}
+            >
+              AI - SpeechToText
+            </Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       const client = new SpeechClient({
-        keyFilename: path.join(process.cwd(), 'credentials.json')
+        keyFilename: path.join(process.cwd(), process.env.GOOGLE_APPLICATION_CREDENTIALS)
       });
       //console.log('this is the client ==>>', client)
       const audioContent = req.body.audioContent;
@@ -20,7 +20,7 @@ export default async function handler(req, res) {
           content: audioContent,
         },
       });
-      console.log('this is the response ==>>', response)
+      //console.log('this is the response ==>>', response)
       const transcription = response.results
         .map(result => result.alternatives[0].transcript)
         .join('\n');

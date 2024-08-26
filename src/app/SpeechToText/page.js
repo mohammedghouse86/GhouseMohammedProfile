@@ -51,7 +51,7 @@ const SpeechRecognition = () => {
 
   return (
     <div>
-      <button onClick={handleSpeechRecognition}>Start Speech Recognition</button>
+      <button style = {{backgroundColor:'blue', color:'white', borderRadius:'5px', padding:'1px'}} onClick={handleSpeechRecognition}>Start Speech Recognition</button>
       <p>{transcript}</p>
     </div>
   );
