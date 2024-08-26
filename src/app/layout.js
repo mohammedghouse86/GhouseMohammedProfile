@@ -1,5 +1,6 @@
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PNavbar from './@PNavbar/page';
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +17,8 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>
+      <body>      
+      <PNavbar/> {/* Rendering the Navbar component */}
         {children}
       </body>
     </html>

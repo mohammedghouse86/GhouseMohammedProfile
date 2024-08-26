@@ -25,7 +25,7 @@ const Page = () => {
 
       const timeout = setTimeout(() => {
         setswitchDisplay("none");
-        router.push('/profileApp');
+        router.push('/Home');
       }, 1500);
 
       // Move the cleanup function outside the condition
